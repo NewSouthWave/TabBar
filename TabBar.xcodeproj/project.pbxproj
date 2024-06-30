@@ -13,6 +13,11 @@
 		3D5A4D582C312A0E00CEF75E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D5A4D562C312A0E00CEF75E /* Main.storyboard */; };
 		3D5A4D5A2C312A0F00CEF75E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D5A4D592C312A0F00CEF75E /* Assets.xcassets */; };
 		3D5A4D5D2C312A0F00CEF75E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D5A4D5B2C312A0F00CEF75E /* LaunchScreen.storyboard */; };
+		3D5A4D662C312ACF00CEF75E /* lamp_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D5A4D642C312ACF00CEF75E /* lamp_off.png */; };
+		3D5A4D672C312ACF00CEF75E /* lamp_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D5A4D652C312ACF00CEF75E /* lamp_on.png */; };
+		3D5A4D692C312B1A00CEF75E /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A4D682C312B1A00CEF75E /* ImageViewController.swift */; };
+		3D5A4D6B2C312C3A00CEF75E /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5A4D6A2C312C3A00CEF75E /* DateViewController.swift */; };
+		3D5A4D6D2C312EA000CEF75E /* File.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D5A4D6C2C312EA000CEF75E /* File.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		3D5A4D592C312A0F00CEF75E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D5A4D5C2C312A0F00CEF75E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D5A4D5E2C312A0F00CEF75E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D5A4D642C312ACF00CEF75E /* lamp_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp_off.png; sourceTree = "<group>"; };
+		3D5A4D652C312ACF00CEF75E /* lamp_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lamp_on.png; sourceTree = "<group>"; };
+		3D5A4D682C312B1A00CEF75E /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		3D5A4D6A2C312C3A00CEF75E /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		3D5A4D6C2C312EA000CEF75E /* File.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = File.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +66,14 @@
 		3D5A4D4F2C312A0E00CEF75E /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				3D5A4D642C312ACF00CEF75E /* lamp_off.png */,
+				3D5A4D652C312ACF00CEF75E /* lamp_on.png */,
+				3D5A4D6C2C312EA000CEF75E /* File.png */,
 				3D5A4D502C312A0E00CEF75E /* AppDelegate.swift */,
 				3D5A4D522C312A0E00CEF75E /* SceneDelegate.swift */,
 				3D5A4D542C312A0E00CEF75E /* ViewController.swift */,
+				3D5A4D682C312B1A00CEF75E /* ImageViewController.swift */,
+				3D5A4D6A2C312C3A00CEF75E /* DateViewController.swift */,
 				3D5A4D562C312A0E00CEF75E /* Main.storyboard */,
 				3D5A4D592C312A0F00CEF75E /* Assets.xcassets */,
 				3D5A4D5B2C312A0F00CEF75E /* LaunchScreen.storyboard */,
@@ -127,7 +142,10 @@
 			files = (
 				3D5A4D5D2C312A0F00CEF75E /* LaunchScreen.storyboard in Resources */,
 				3D5A4D5A2C312A0F00CEF75E /* Assets.xcassets in Resources */,
+				3D5A4D672C312ACF00CEF75E /* lamp_on.png in Resources */,
+				3D5A4D6D2C312EA000CEF75E /* File.png in Resources */,
 				3D5A4D582C312A0E00CEF75E /* Main.storyboard in Resources */,
+				3D5A4D662C312ACF00CEF75E /* lamp_off.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D5A4D6B2C312C3A00CEF75E /* DateViewController.swift in Sources */,
 				3D5A4D552C312A0E00CEF75E /* ViewController.swift in Sources */,
 				3D5A4D512C312A0E00CEF75E /* AppDelegate.swift in Sources */,
+				3D5A4D692C312B1A00CEF75E /* ImageViewController.swift in Sources */,
 				3D5A4D532C312A0E00CEF75E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,8 +312,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,8 +338,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
