@@ -54,6 +54,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zdX-14-hNc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VQK-Lk-KNh">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -61,6 +62,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="js2-s5-tM9"/>
                         <segue destination="Df4-5v-Bzd" kind="relationship" relationship="viewControllers" id="i5R-xI-Qlv"/>
                         <segue destination="VCJ-NW-1cH" kind="relationship" relationship="viewControllers" id="qLt-uu-KPV"/>
+                        <segue destination="iYN-us-kFG" kind="relationship" relationship="viewControllers" id="V6m-1o-5X6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m2m-Be-5S1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -156,10 +158,67 @@
             </objects>
             <point key="canvasLocation" x="1065" y="715"/>
         </scene>
+        <!--Gallery-->
+        <scene sceneID="Oqn-03-Aad">
+            <objects>
+                <viewController id="iYN-us-kFG" customClass="MultiPickerViewController" customModule="TabBar" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JQW-WM-Jua">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i2A-KN-nqE">
+                                <rect key="frame" x="16" y="129" width="171" height="230"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="iYN-us-kFG" id="7DH-yl-yED"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8UF-5L-TEW">
+                                <rect key="frame" x="195" y="129" width="182" height="230"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="iYN-us-kFG" id="gyF-7C-cc6"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected Item:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGs-XO-G75">
+                                <rect key="frame" x="16" y="367" width="116" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nN3-Mr-iie">
+                                <rect key="frame" x="145" y="367" width="232" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mLA-5r-rKw">
+                                <rect key="frame" x="36" y="416" width="321" height="372"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PLk-JO-Hbd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Gallery" image="camera.macro" catalog="system" id="EsZ-UO-Z2t"/>
+                    <connections>
+                        <outlet property="imgView" destination="mLA-5r-rKw" id="WDB-cL-95M"/>
+                        <outlet property="lblImageFileName" destination="nN3-Mr-iie" id="Cef-qJ-U9d"/>
+                        <outlet property="leftPickerView" destination="i2A-KN-nqE" id="PS2-Tj-Fpi"/>
+                        <outlet property="rightPickerView" destination="8UF-5L-TEW" id="Sak-6S-MYi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uuB-8t-Wps" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1065" y="1446"/>
+        </scene>
     </scenes>
     <resources>
         <image name="File.png" width="1280" height="1124"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="camera.macro" catalog="system" width="128" height="114"/>
         <image name="lamp.desk.fill" catalog="system" width="116" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
